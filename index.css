@@ -1,0 +1,107 @@
+* {
+    margin: 0 auto;       /*Внешний отступ и отключение автонастройки отступа*/
+}
+
+#header, #footer {        /*Применяем к шапке и подвалу сайта*/
+    width: 100%;          /*По ширине странички сайта сайта100% */
+    height: 70px;         /*Высота 70 пикселей*/
+    text-align: center;     /*Редактирование текста по середине*/
+    border-bottom: 4px solid rgb(151, 158, 160);     /*Обводка элементов снизу*/
+    background: rgb(0, 0, 0);      /*Цвет фона*/
+    color: rgb(255, 255, 255);     /*Цвет текста*/
+    line-height: 70px;     /*Высота линии, в которой находится текст*/
+    margin-bottom: 50px;   /*Отступ снизу*/
+    float: left;      /*Выравнивание элемента по левому краю*/
+}
+
+.center {
+    height: 700px;
+}
+
+#main {
+    width: 50%;
+    margin-left: 10%;
+    background: white;
+    border: 1px solid silver;
+    padding: 20px 2.5%;
+    float: left;
+    position: relative;   /*Относительное позиционирование*/
+}
+
+#aside {
+    width: 20%;
+    padding: 20px 2.5%;
+    background: white;
+    border: 1px solid silver;
+    float: left;
+    margin-left: 5%;
+    left: -100px;    /*Влево позиционирование*/
+}
+
+#nav {         /*Применение стилей к панели навигации*/
+    list-style: none;     /*Убираем стили для навигации*/
+    display: block;      /*Элементы списка отображаются один под другим*/
+    float: left;       
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#nav li {       /*Применение к стилей к кнопкам*/
+    display: inline;        /*Положение элементов в строчку*/
+    background: wheat;    
+    border: 1px solid silver;
+    padding: 0 20px;   /*Внутренний отступ*/
+    cursor: pointer;   /*Вид курсора при наведении на элементы*/
+}
+
+#nav li:hover {    /*При наведении на элементы на панели навигации*/
+    color: white;
+    background: goldenrod;
+    border-radius: 5px;     /*При наведении появляется закруглённость у элементов*/
+    border-color: rgb(54, 54, 50);
+}
+
+#nav li:not(:last-of-type) {      /*Отступы для всех элементов кроме последнего*/
+    margin-right: 20px;
+}
+
+#footer {
+    margin-bottom: 0;
+    margin-top: 50px;
+    border-bottom: 0;
+    border-top: 4px solid rgb(151, 158, 160);
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    background-color: rgb(34, 53, 194);
+    border-radius: 50%;
+    position: relative;
+    margin-left: 0;
+    margin-top: 10px;
+
+    animation-name: circle-top;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.content:hover .circle {
+    animation-play-state: paused;
+}
+
+@keyframes circle-top {
+    0%{
+        left: 0;
+    }
+    50%{
+        border-radius: 0%;
+    }
+    100%{
+        left: 500px;
+    }
+}
